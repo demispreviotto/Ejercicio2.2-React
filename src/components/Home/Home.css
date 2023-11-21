@@ -1,0 +1,33 @@
+@keyframes left-slide {
+    from {
+        right: -10em;
+    }
+
+    to {
+        right: .5em;
+    }
+}
+
+.card-container {
+    display: flex;
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+    flex-direction: column;
+    z-index: 2;
+    gap: 1em;
+    align-items: flex-end;
+    animation-name: left-slide;
+    animation-duration: 2s;
+}
+
+.card {
+    z-index: 2;
+    background-color: rgba(127, 127, 127, 0.4);
+    border: .1px solid rgb(125, 125, 125);
+    border-radius: 16px 0 0 16px;
+    width: 12em;
+    height: 8em;
+    color: var(--clr-1);
+    padding: 1em;
+}

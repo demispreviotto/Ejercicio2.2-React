@@ -1,0 +1,32 @@
+.navbar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: transparent;
+    height: 5em;
+    padding: 1em;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    padding: 5px;
+    justify-content: space-evenly;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-1);
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: var(--clr-3);
+}

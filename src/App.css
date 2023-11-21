@@ -1,0 +1,58 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 10em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.root-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(15deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.ramen-bg {
+  position: absolute;
+  bottom: 29%;
+  left: -40%;
+  z-index: 0;
+  height: 48%;
+  rotate: 35deg;
+  animation-name: rotate;
+  animation-duration: 2s;
+}
