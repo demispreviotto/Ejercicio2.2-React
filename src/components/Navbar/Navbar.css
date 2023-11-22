@@ -5,9 +5,11 @@
     background-color: transparent;
     height: 5em;
     padding: 1em;
+    z-index: 3;
+    gap: 1em;
 }
 
-ul {
+/* ul {
     display: flex;
     flex-direction: row;
     gap: 1em;
@@ -17,7 +19,7 @@ ul {
 
 li {
     list-style: none;
-}
+} */
 
 a {
     text-decoration: none;
@@ -28,5 +30,9 @@ a {
 }
 
 a:hover {
-    color: var(--clr-3);
+    color: var(--clr-2);
+}
+
+a.active {
+    color: var(--clr-2);
 }

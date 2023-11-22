@@ -1,0 +1,31 @@
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-5);
+    margin: .5em;
+    padding: 1em;
+    text-align: start;
+    gap: .1em;
+    transform: translateY(-1em);
+}
+
+label {
+    color: var(--clr-1);
+}
+
+input,
+textarea {
+    border: none;
+    background-color: var(--clr-5);
+    padding: 1em .5em;
+    color: var(--clr-1);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--clr-3);
+}
+
+input {
+    height: 1.5em;
+}

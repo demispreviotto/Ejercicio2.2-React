@@ -1,33 +1,20 @@
-@keyframes left-slide {
+@keyframes rotate {
     from {
-        right: -10em;
+        transform: rotate(15deg);
     }
 
     to {
-        right: .5em;
+        transform: rotate(0deg);
     }
 }
 
-.card-container {
-    display: flex;
+.ramen-bg {
     position: absolute;
-    bottom: 0.5em;
-    right: 0.5em;
-    flex-direction: column;
-    z-index: 2;
-    gap: 1em;
-    align-items: flex-end;
-    animation-name: left-slide;
+    bottom: 29%;
+    left: -40%;
+    z-index: 0;
+    height: 48%;
+    rotate: 35deg;
+    animation-name: rotate;
     animation-duration: 2s;
-}
-
-.card {
-    z-index: 2;
-    background-color: rgba(127, 127, 127, 0.4);
-    border: .1px solid rgb(125, 125, 125);
-    border-radius: 16px 0 0 16px;
-    width: 12em;
-    height: 8em;
-    color: var(--clr-1);
-    padding: 1em;
 }

@@ -1,11 +1,11 @@
 import React from 'react'
 import './App.css'
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home'
-import Header from './components/Header/Header'
-
-import ramenBg from './assets/Ramen.png'
-
+import Menu from './components/Menu/Menu'
+import Contact from './components/Contact/Contact'
 function App() {
 
   const dishes = [
@@ -29,12 +29,84 @@ function App() {
     }
   ]
 
+  const menuItems = [
+    {
+      category: 'Signature Ramen Bowls',
+      items: [
+        {
+          name: 'Classic Shoyu Ramen',
+          description: 'Our signature soy sauce-flavored broth, served with tender chashu pork, green onions, and nori.',
+        },
+        {
+          name: 'Spicy Miso Ramen',
+          description: 'A flavorful blend of miso and spicy broth, topped with ground pork, bean sprouts, and a sprinkle of sesame seeds.',
+        },
+        {
+          name: 'Vegetarian Zen Ramen',
+          description: 'A light and wholesome option with vegetable broth, tofu, assorted seasonal vegetables, and a drizzle of sesame oil.',
+        },
+      ],
+    },
+    {
+      category: "Chef's Specials",
+      items: [
+        {
+          name: 'Tonkotsu Deluxe',
+          description: 'Rich and creamy pork bone broth, accompanied by melt-in-your-mouth pork belly, bamboo shoots, and a seasoned soft-boiled egg.',
+        },
+        {
+          name: 'Seafood Extravaganza Ramen',
+          description: 'A delightful medley of fresh seafood in a savory broth, featuring shrimp, mussels, and fish cakes.',
+        },
+        {
+          name: 'Sesame Chicken Ramen',
+          description: 'Crispy sesame-coated chicken on a bed of ramen noodles, served with bok choy and a side of tangy ginger soy sauce.',
+        },
+      ],
+    },
+    {
+      category: 'Sides and Appetizers',
+      items: [
+        {
+          name: 'Edamame',
+          description: 'Steamed soybeans lightly seasoned with sea salt.',
+        },
+        {
+          name: 'Gyoza Fusion',
+          description: 'Pan-fried dumplings filled with a succulent mixture of pork, cabbage, and aromatic spices.',
+        },
+        {
+          name: 'Japanese Cucumber Salad',
+          description: 'Refreshing cucumber slices tossed in a sesame-infused vinaigrette.',
+        },
+      ],
+    },
+    {
+      category: 'Desserts',
+      items: [
+        {
+          name: 'Matcha Green Tea Ice Cream',
+          description: 'A perfect balance of sweetness and earthy matcha flavor.',
+        },
+        {
+          name: 'Mochi Sampler',
+          description: 'Indulge in an assortment of chewy mochi with various traditional fillings.',
+        },
+      ],
+    },
+  ];
+
+
   return (
     <div className='root-container'>
-      <Navbar />
-      <Header />
-      <img className='ramen-bg' src={ramenBg} alt="ramen" />
-      <Home dishes={dishes} />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home dishes={dishes} />} />
+          <Route path='/menu' element={<Menu menuItems={menuItems} />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+      </Router>
     </div>
   )
 }

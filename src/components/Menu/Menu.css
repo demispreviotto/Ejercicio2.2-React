@@ -1,0 +1,55 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-5em);
+}
+
+.menu h2 {
+    text-align: start;
+    font-size: 4em;
+    margin-left: .5em;
+    line-height: .8em;
+}
+
+.menu .card {
+    min-height: 13em;
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    padding-right: 7.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu .card h3 {
+    font-size: 1.5em;
+    line-height: 1.1em;
+    text-align: start;
+}
+
+.menu .card p {
+    text-align: start;
+}
+
+.menu .img-container {
+    height: 0;
+    z-index: 2;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(9em, -13.5em) rotate(15deg);
+    }
+
+    to {
+        transform: translate(9em, -13.5em) rotate(0deg);
+    }
+}
+
+.menu img {
+    width: 12em;
+    transform: translate(9em, -13.5em);
+    animation-name: rotate;
+    animation-duration: 2s;
+    transform-origin: center center
+}

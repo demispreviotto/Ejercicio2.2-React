@@ -1,15 +1,17 @@
 import React from 'react'
 import "./Home.css"
+import ramenBg from '../../assets/Ramen.png'
 
 const Home = (props) => {
     const dishes = props.dishes
 
-    return (
+    return (<>
+        <h1 className='h1-under'>Ram<br />en</h1>
+        <img className='ramen-bg' src={ramenBg} alt="ramen" />
         <div className='card-container'>
-            {/* <h1>Home</h1> */}
             {dishes.map(dish => {
                 return (
-                    <div key={dish._id} className="card">
+                    <div key={dish.id} className="card">
                         <h2>{dish.name}</h2>
                         <p>{dish.description}</p>
                         <p><strong>Price: </strong>{dish.price}$</p>
@@ -17,6 +19,7 @@ const Home = (props) => {
                 )
             })}
         </div>
+    </>
     )
 }
 
