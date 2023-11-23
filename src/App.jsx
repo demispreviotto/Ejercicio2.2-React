@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home'
 import Menu from './components/Menu/Menu'
+import Reservation from './components/Reservation/Reservation'
 import Contact from './components/Contact/Contact'
 function App() {
 
@@ -104,6 +105,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home dishes={dishes} />} />
           <Route path='/menu' element={<Menu menuItems={menuItems} />} />
+          <Route path='/reservation' element={<Reservation />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
       </Router>

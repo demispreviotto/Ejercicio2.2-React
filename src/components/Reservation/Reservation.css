@@ -1,0 +1,38 @@
+.reservation h2 {
+    text-align: start;
+    font-size: 4em;
+    margin-left: .5em;
+    line-height: .8em;
+}
+
+.reservation form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-5);
+    margin: .5em;
+    padding: 1em;
+    text-align: start;
+    gap: .1em;
+    transform: translateY(-1em);
+}
+
+.reservation label {
+    color: var(--clr-1);
+}
+
+.reservation input,
+.reservation textarea {
+    border: none;
+    background-color: var(--clr-5);
+    padding: 1em .5em;
+    color: var(--clr-1);
+}
+
+.reservation input::placeholder,
+textarea::placeholder {
+    color: var(--clr-3);
+}
+
+.reservation input {
+    height: 1.5em;
+}
